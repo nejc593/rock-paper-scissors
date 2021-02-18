@@ -13,3 +13,12 @@ function computerChoice() {
         return "scissors";
     }
 }
+
+
+
+
+
+
+
+const computerChoice = computerChoice();
+const playerChoice= promptPlayer();
