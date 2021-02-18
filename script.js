@@ -20,5 +20,5 @@ function computerChoice() {
 
 
 
-const computerChoice = computerChoice();
+const computersChoice = computerChoice();
 const playerChoice= promptPlayer();
