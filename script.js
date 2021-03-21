@@ -27,6 +27,14 @@ function round (playerChoice, computerChoice) {
     }
 
 }  
+function fullGame () {
+    let score = 0;
+    for (i=0; i <5; i++) {
+        let playerChoice = promptPlayer();
+        score += round(playerChoice, computerChoice());
+    }
+    return score;
+}
 
 
 
