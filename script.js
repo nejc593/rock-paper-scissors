@@ -14,7 +14,7 @@ function computerChoice() {
     }
 }
 
-function round (playerChoice, computerChoice) {
+function round(playerChoice, computerChoice) {
     if (playerChoice == computersChoice) {
         console.log("It's a tie!");
         return 0;
@@ -26,22 +26,24 @@ function round (playerChoice, computerChoice) {
         return 1;
     }
 
-}  
-function fullGame () {
+}
+
+function fullGame() {
     let score = 0;
-    for (i=0; i <5; i++) {
+    for (i = 0; i < 5; i++) {
         let playerChoice = promptPlayer();
         score += round(playerChoice, computerChoice());
     }
     return score;
 }
+
 function determineWhoWon(score) {
-if (score < 0) {
-console.log("You lost. your score was: "+ score);
-} else {
-console.log("you won your score was: " + score);
-}
-return "The game is done"
+    if (score < 0) {
+        console.log("You lost. your score was: " + score);
+    } else {
+        console.log("you won your score was: " + score);
+    }
+    return "The game is done"
 
 }
 
@@ -49,6 +51,6 @@ return "The game is done"
 
 
 const computersChoice = computerChoice();
-const playerChoice= promptPlayer();
+const playerChoice = promptPlayer();
 const score = fullGame();
 console.log(determineWhoWon(score));
