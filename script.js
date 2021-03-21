@@ -14,7 +14,7 @@ function computerChoice() {
     }
 }
 
-function round () {
+function round (playerChoice, computerChoice) {
     if (playerChoice == computersChoice) {
         console.log("It's a tie!");
         return 0;
@@ -27,7 +27,6 @@ function round () {
     }
 
 }  
-
 
 
 
