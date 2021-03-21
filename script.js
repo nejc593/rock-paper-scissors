@@ -35,10 +35,20 @@ function fullGame () {
     }
     return score;
 }
+function determineWhoWon(score) {
+if (score < 0) {
+console.log("You lost. your score was: "+ score);
+} else {
+console.log("you won your score was: " + score);
+}
+return "The game is done"
 
+}
 
 
 
 
 const computersChoice = computerChoice();
 const playerChoice= promptPlayer();
+const score = fullGame();
+console.log(determineWhoWon(score));
