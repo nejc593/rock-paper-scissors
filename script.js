@@ -1,5 +1,5 @@
 function promptPlayer() {
-    return prompt("Do you choose rock, paper or scissors ?");
+    return prompt("Do you choose rock, paper or scissors ?").toLowerCase(); //make players choice lowercase
 
 }
 
