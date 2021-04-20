@@ -55,3 +55,9 @@ const computersChoice = computerChoice();
 //const playerChoice = promptPlayer();
 //const score = fullGame();
 //console.log(determineWhoWon(score));
+let rock = document.querySelector("button.rock")
+rock.addEventListener("click", () => round("rock", computersChoice));
+let paper = document.querySelector("button.paper")
+paper.addEventListener("click", () => round("paper", computersChoice));
+let scissors = document.querySelector("button.scissors")
+scissors.addEventListener("click", () => round("scissors", computersChoice));
