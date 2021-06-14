@@ -70,7 +70,9 @@ rock.addEventListener("click", () => {
         currentRound++;
         currentRoundElem.textContent = "Round: " + currentRound;
     }
+    if (currentRound == 5) {
     score += fullRound("rock", computersChoice);
+    }
     determineWhoWon(score);
 })
 let paper = document.querySelector("button.paper");
@@ -93,7 +95,10 @@ scissors.addEventListener("click", () => {
     if (currentRound < 5) {
         currentRound++;
         currentRoundElem.textContent = "Round: " + currentRound;
+
     }
+    if (currentRound == 5) {
     score += fullRound("scissors", computersChoice)
+    }
     determineWhoWon(score);
 });
