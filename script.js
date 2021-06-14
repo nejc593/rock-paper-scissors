@@ -29,8 +29,6 @@ function fullRound(playerChoice, computersChoice) {
 
 
 function determineWhoWon(score) {
-    console.log("how much is score inside determineWhoWOn: ", score);
-    console.log("score type: ", typeof score);
     if (currentRound >= 5) {
         if (score < 0) {
             finishResultElem.textContent = "You lost. your score was: " + score.toString();
@@ -56,29 +54,27 @@ function resetGame() {
 //const score = fullGame();
 //console.log(determineWhoWon(score));
 let currentRoundElem = document.querySelector(".currentRound");
-console.log("Current Round element: ", currentRoundElem);
 
 let finishResultElem = document.querySelector(".finishResult");
-console.log("Finish Result element: ", finishResultElem);
 
 
 
 let currentRound = 0;
 let score = 0;
-console.log("Your score is: ", score);
+
 let rock = document.querySelector("button.rock");
+
 rock.addEventListener("click", () => {
     const computersChoice = computerChoice();
     if (currentRound < 5) {
         currentRound++;
         currentRoundElem.textContent = "Round: " + currentRound;
     }
-    console.log("Your score is INSIDE rock AddEventListener: (before fullRound Call) ", score);
     score += fullRound("rock", computersChoice);
-    console.log("Your score is INSIDE rock AddEventListener: (after fullRound Call) ", score);
     determineWhoWon(score);
 })
 let paper = document.querySelector("button.paper");
+
 paper.addEventListener("click", () => {
     const computersChoice = computerChoice();
     if (currentRound < 5) {
@@ -89,7 +85,6 @@ paper.addEventListener("click", () => {
     if (currentRound == 5) {
         score += fullRound("paper", computersChoice);
     }
-    console.log("score type: ", typeof score);
     determineWhoWon(score);
 });
 let scissors = document.querySelector("button.scissors")
