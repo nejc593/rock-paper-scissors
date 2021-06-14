@@ -10,8 +10,6 @@ function computerChoice() {
 }
 
 function fullRound(playerChoice, computersChoice) {
-    console.log("Computer choice: ", computersChoice)
-    debugger;
     if (playerChoice == computersChoice) {
         console.log("It's a tie!");
         return 0;
