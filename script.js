@@ -43,7 +43,7 @@ function determineWhoWon(score) {
 function resetGame() {
     currentRound = 0;
     score = 0;
-    currentRoundElem.textContent = currentRound;
+    currentRoundElem.textContent = "Round: ";
     finishResultElem.textContent = "Result: ";
 }
 
@@ -101,4 +101,9 @@ scissors.addEventListener("click", () => {
     score += fullRound("scissors", computersChoice)
     }
     determineWhoWon(score);
+});
+let resetButton = document.querySelector(".reset");
+console.log("Reset button: ", resetButton);
+resetButton.addEventListener("click", () => {
+resetGame();
 });
