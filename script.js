@@ -50,9 +50,7 @@ function resetGame() {
 
 
 
-//const playerChoice = promptPlayer();
-//const score = fullGame();
-//console.log(determineWhoWon(score));
+
 let currentRoundElem = document.querySelector(".currentRound");
 
 let finishResultElem = document.querySelector(".finishResult");
