@@ -1,8 +1,8 @@
-/*function promptPlayer() {
+function promptPlayer() {
     return prompt("Do you choose rock, paper or scissors ?").toLowerCase(); //make players choice lowercase
 
 }
-*/
+
 function computerChoice() {
     let randomNum = Math.floor(Math.random() * 3);
     if (randomNum == 0) {
@@ -28,7 +28,7 @@ function round(playerChoice, computerChoice) {
 
 }
 
-/*
+
 function fullGame() {
     let score = 0;
     for (i = 0; i < 5; i++) {
@@ -37,7 +37,7 @@ function fullGame() {
     }
     return score;
 }
-*/
+
 function determineWhoWon(score) {
     if (score < 0) {
         console.log("You lost. your score was: " + score);
@@ -52,9 +52,9 @@ function determineWhoWon(score) {
 
 
 const computersChoice = computerChoice();
-//const playerChoice = promptPlayer();
-//const score = fullGame();
-//console.log(determineWhoWon(score));
+const playerChoice = promptPlayer();
+const score = fullGame();
+console.log(determineWhoWon(score));
 let rock = document.querySelector("button.rock")
 rock.addEventListener("click", () => round("rock", computersChoice));
 let paper = document.querySelector("button.paper")
